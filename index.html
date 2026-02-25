@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lima Web Studio — Sites Modernos em Apucarana e Região</title>
+    <meta name="description"
+        content="Desenvolvemos sites rápidos, modernos e focados em conversão para o seu negócio em Apucarana e região. Orçamento rápido e sem complicação." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ═══════════════ HEADER ═══════════════ -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#" class="logo" aria-label="Lima Web Studio">
+                <img src="./logo.png" alt="Lima Web Studio" class="logo__img" />
+                <span class="logo__text">Lima<span class="logo__accent">Web</span></span>
+            </a>
+            <nav class="header__nav">
+                <a href="#diferenciais" class="nav-link">Diferenciais</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="https://wa.me/5543996028877" target="_blank" rel="noopener" class="btn btn--outline btn--sm"
+                    id="header-cta">Contato</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile nav overlay -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#diferenciais" class="mobile-nav__link">Diferenciais</a>
+        <a href="#servicos" class="mobile-nav__link">Serviços</a>
+        <a href="https://wa.me/5543996028877" target="_blank" rel="noopener" class="btn btn--glow">Contato</a>
+    </div>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero">
+        <div class="hero__glow"></div>
+        <div class="container hero__inner">
+            <p class="hero__tag">🚀 Agência Digital em Apucarana</p>
+            <h1 class="hero__title">
+                Sua empresa no<br />mundo digital,<br /><span class="text-lime">sem complicação.</span>
+            </h1>
+            <p class="hero__subtitle">
+                Desenvolvemos sites rápidos, modernos e focados em vender mais para o seu negócio em Apucarana e região.
+            </p>
+            <div class="hero__actions">
+                <a href="https://wa.me/5543996028877?text=Olá!%20Quero%20um%20orçamento%20para%20meu%20site."
+                    target="_blank" rel="noopener" class="btn btn--glow btn--lg" id="hero-cta">
+                    Quero um orçamento
+                    <svg class="btn__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+            <div class="hero__proof">
+                <div class="hero__stat">
+                    <span class="hero__stat-number">50+</span>
+                    <span class="hero__stat-label">Projetos entregues</span>
+                </div>
+                <div class="hero__stat-divider"></div>
+                <div class="hero__stat">
+                    <span class="hero__stat-number">98%</span>
+                    <span class="hero__stat-label">Clientes satisfeitos</span>
+                </div>
+                <div class="hero__stat-divider"></div>
+                <div class="hero__stat">
+                    <span class="hero__stat-number">7 dias</span>
+                    <span class="hero__stat-label">Entrega média</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FEATURES / DIFFERENTIALS ═══════════════ -->
+    <section class="features" id="diferenciais">
+        <div class="container">
+            <p class="section-tag">Por que a Lima Web?</p>
+            <h2 class="section-title">Nossos <span class="text-lime">Diferenciais</span></h2>
+            <div class="features__grid">
+
+                <!-- Card 1 -->
+                <div class="feature-card">
+                    <div class="feature-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M3.5 21L14 3.5L24.5 21H3.5Z" stroke="var(--lime)" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M14 14v3" stroke="var(--lime)" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="14" cy="18.5" r="0.5" fill="var(--lime)" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title">Design Moderno</h3>
+                    <p class="feature-card__desc">
+                        Interfaces elegantes que transmitem credibilidade e encantam seus visitantes desde o primeiro
+                        clique.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="feature-card">
+                    <div class="feature-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M14 3.5v7l4.5-2.5" stroke="var(--lime)" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="14" cy="14" r="10.5" stroke="var(--lime)" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title">Entrega Rápida</h3>
+                    <p class="feature-card__desc">
+                        Com processos otimizados por IA, entregamos seu projeto em tempo recorde sem perder qualidade.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="feature-card">
+                    <div class="feature-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M7 14l4.5 4.5L21 9" stroke="var(--lime)" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title">Focado em Conversão</h3>
+                    <p class="feature-card__desc">
+                        Cada elemento é pensado para converter visitantes em clientes reais e gerar resultados
+                        mensuráveis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ SERVICES ═══════════════ -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <p class="section-tag">O que fazemos</p>
+            <h2 class="section-title">Nossos <span class="text-lime">Serviços</span></h2>
+            <div class="services__grid">
+
+                <div class="service-card" data-modal="modal-institucional">
+                    <div class="service-card__number">01</div>
+                    <h3 class="service-card__title">Sites Institucionais</h3>
+                    <p class="service-card__desc">
+                        A presença online que sua empresa merece. Um site completo, rápido e otimizado para o Google.
+                    </p>
+                    <button class="service-card__link" data-modal="modal-institucional">
+                        Saiba mais →
+                    </button>
+                </div>
+
+                <div class="service-card service-card--featured" data-modal="modal-landing">
+                    <div class="service-card__badge">Mais popular</div>
+                    <div class="service-card__number">02</div>
+                    <h3 class="service-card__title">Landing Pages</h3>
+                    <p class="service-card__desc">
+                        Páginas de alta conversão, focadas em um único objetivo: transformar visitantes em leads e
+                        vendas.
+                    </p>
+                    <button class="service-card__link" data-modal="modal-landing">
+                        Saiba mais →
+                    </button>
+                </div>
+
+                <div class="service-card" data-modal="modal-linkinbio">
+                    <div class="service-card__number">03</div>
+                    <h3 class="service-card__title">Link in Bio</h3>
+                    <p class="service-card__desc">
+                        Centralize todos os seus links em uma página personalizada, perfeita para Instagram e redes
+                        sociais.
+                    </p>
+                    <button class="service-card__link" data-modal="modal-linkinbio">
+                        Saiba mais →
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ CTA SECTION ═══════════════ -->
+    <section class="cta-section">
+        <div class="cta-section__glow"></div>
+        <div class="container cta-section__inner">
+            <h2 class="cta-section__title">Pronto para levar sua empresa<br /><span class="text-lime">para o próximo
+                    nível?</span></h2>
+            <p class="cta-section__desc">Fale conosco agora pelo WhatsApp e receba um orçamento personalizado em
+                minutos.</p>
+            <a href="https://wa.me/5543996028877?text=Olá!%20Quero%20um%20orçamento%20para%20meu%20site."
+                target="_blank" rel="noopener" class="btn btn--glow btn--lg" id="bottom-cta">
+                Falar pelo WhatsApp
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    <path
+                        d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.12 1.52 5.855L.054 23.524a.5.5 0 00.607.596l5.584-1.522A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82a9.82 9.82 0 01-5.202-1.49l-.372-.222-3.87 1.054 1.034-3.788-.243-.387A9.795 9.795 0 012.18 12 9.82 9.82 0 0112 2.18 9.82 9.82 0 0121.82 12 9.82 9.82 0 0112 21.82z" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <a href="#" class="logo logo--sm" aria-label="Lima Web Studio">
+                    <img src="./logo.png" alt="Lima Web Studio" class="logo__img logo__img--sm" />
+                    <span class="logo__text">Lima<span class="logo__accent">Web</span></span>
+                </a>
+            </div>
+            <p class="footer__copy">© 2026 Lima Web Studio. Todos os direitos reservados.</p>
+            <div class="footer__social">
+                <a href="https://wa.me/5543996028877" target="_blank" rel="noopener" class="footer__whatsapp"
+                    aria-label="WhatsApp">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.12 1.52 5.855L.054 23.524a.5.5 0 00.607.596l5.584-1.522A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82a9.82 9.82 0 01-5.202-1.49l-.372-.222-3.87 1.054 1.034-3.788-.243-.387A9.795 9.795 0 012.18 12 9.82 9.82 0 0112 2.18 9.82 9.82 0 0121.82 12 9.82 9.82 0 0112 21.82z" />
+                    </svg>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════ SERVICE MODALS ═══════════════ -->
+
+    <!-- Modal: Sites Institucionais -->
+    <div class="modal-overlay" id="modal-institucional">
+        <div class="modal">
+            <button class="modal__close" aria-label="Fechar">&times;</button>
+            <div class="modal__number">01</div>
+            <h3 class="modal__title">Sites Institucionais</h3>
+            <p class="modal__desc">
+                Seu site institucional é a vitrine digital da sua empresa. Criamos sites modernos, responsivos e
+                otimizados para que seus clientes encontrem você no Google.
+            </p>
+            <ul class="modal__features">
+                <li>Design exclusivo e personalizado</li>
+                <li>Otimizado para SEO (apareça no Google)</li>
+                <li>Responsivo — funciona em celular, tablet e desktop</li>
+                <li>Carregamento ultra-rápido</li>
+                <li>Integração com Google Analytics e redes sociais</li>
+            </ul>
+            <a href="https://wa.me/5543996028877?text=Olá!%20Tenho%20interesse%20em%20um%20site%20institucional."
+                target="_blank" rel="noopener" class="btn btn--glow modal__cta">
+                Quero um site institucional
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal: Landing Pages -->
+    <div class="modal-overlay" id="modal-landing">
+        <div class="modal">
+            <button class="modal__close" aria-label="Fechar">&times;</button>
+            <div class="modal__number">02</div>
+            <h3 class="modal__title">Landing Pages</h3>
+            <p class="modal__desc">
+                Landing pages são páginas estratégicas com um único objetivo: converter visitantes em clientes. Ideal
+                para campanhas de anúncio, lançamentos e captação de leads.
+            </p>
+            <ul class="modal__features">
+                <li>Foco total em conversão</li>
+                <li>Design persuasivo com copywriting estratégico</li>
+                <li>Formulários integrados e call-to-actions otimizados</li>
+                <li>Testes A/B para maximizar resultados</li>
+                <li>Integração com WhatsApp, e-mail marketing e CRMs</li>
+            </ul>
+            <a href="https://wa.me/5543996028877?text=Olá!%20Tenho%20interesse%20em%20uma%20landing%20page."
+                target="_blank" rel="noopener" class="btn btn--glow modal__cta">
+                Quero uma landing page
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal: Link in Bio -->
+    <div class="modal-overlay" id="modal-linkinbio">
+        <div class="modal">
+            <button class="modal__close" aria-label="Fechar">&times;</button>
+            <div class="modal__number">03</div>
+            <h3 class="modal__title">Link in Bio</h3>
+            <p class="modal__desc">
+                Chega de links genéricos! Tenha uma página personalizada com a identidade da sua marca para usar no
+                Instagram, TikTok e outras redes sociais.
+            </p>
+            <ul class="modal__features">
+                <li>Design customizado com suas cores e logo</li>
+                <li>Todos os seus links em um só lugar</li>
+                <li>Botões para WhatsApp, loja, portfólio e mais</li>
+                <li>Carregamento instantâneo</li>
+                <li>Domínio personalizado (ex: link.suaempresa.com)</li>
+            </ul>
+            <a href="https://wa.me/5543996028877?text=Olá!%20Tenho%20interesse%20em%20uma%20página%20Link%20in%20Bio."
+                target="_blank" rel="noopener" class="btn btn--glow modal__cta">
+                Quero meu link in bio
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
