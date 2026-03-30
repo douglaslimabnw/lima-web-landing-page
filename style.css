@@ -624,6 +624,122 @@ img {
 }
 
 /* ═══════════════════════════════════════════════
+   PORTFOLIO
+   ═══════════════════════════════════════════════ */
+.portfolio {
+  padding: 100px 0;
+  background: var(--bg);
+  position: relative;
+}
+
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.portfolio-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--lime), transparent);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.portfolio-card:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(181, 255, 43, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3), 0 0 20px rgba(181, 255, 43, 0.05);
+}
+
+.portfolio-card:hover::before {
+  opacity: 1;
+}
+
+.portfolio-card__visual {
+  width: 56px;
+  height: 56px;
+  background: rgba(181, 255, 43, 0.06);
+  border: 1px solid rgba(181, 255, 43, 0.12);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+
+.portfolio-card:hover .portfolio-card__visual {
+  background: rgba(181, 255, 43, 0.1);
+  border-color: rgba(181, 255, 43, 0.25);
+  box-shadow: 0 0 24px rgba(181, 255, 43, 0.1);
+}
+
+.portfolio-card__initial {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--lime);
+  letter-spacing: -0.02em;
+}
+
+.portfolio-card__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.portfolio-card__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.01em;
+}
+
+.portfolio-card__link {
+  font-family: var(--font);
+  font-size: 0.88rem;
+  color: var(--lime);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.8;
+  transition: opacity var(--transition);
+}
+
+.portfolio-card:hover .portfolio-card__link {
+  opacity: 1;
+}
+
+.portfolio-card__link svg {
+  transition: transform var(--transition);
+}
+
+.portfolio-card:hover .portfolio-card__link svg {
+  transform: translate(2px, -2px);
+}
+
+/* ═══════════════════════════════════════════════
    CTA SECTION
    ═══════════════════════════════════════════════ */
 .cta-section {
@@ -930,7 +1046,8 @@ button.service-card__link {
   }
 
   .features,
-  .services {
+  .services,
+  .portfolio {
     padding: 64px 0;
   }
 

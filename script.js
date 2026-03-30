@@ -42,6 +42,7 @@ const revealElements = () => {
   // Add reveal class to elements we want to animate
   const targets = [
     ...document.querySelectorAll('.feature-card'),
+    ...document.querySelectorAll('.portfolio-card'),
     ...document.querySelectorAll('.service-card'),
     ...document.querySelectorAll('.section-tag'),
     ...document.querySelectorAll('.section-title'),
@@ -52,7 +53,7 @@ const revealElements = () => {
   targets.forEach(el => el.classList.add('reveal'));
 
   // Add stagger class to grids
-  document.querySelectorAll('.features__grid, .services__grid').forEach(grid => {
+  document.querySelectorAll('.features__grid, .portfolio__grid, .services__grid').forEach(grid => {
     grid.classList.add('reveal-stagger');
   });
 
