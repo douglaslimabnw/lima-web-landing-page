@@ -1033,7 +1033,7 @@ img {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 100px;
+  width: 250px;
   z-index: 2;
   pointer-events: none;
 }
@@ -1061,17 +1061,19 @@ img {
   font-size: 1.1rem;
   font-weight: 800;
   color: var(--text-muted);
+  opacity: 0.3;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   padding: 0 40px;
   display: inline-flex;
   align-items: center;
-  transition: color var(--transition);
+  transition: all var(--transition);
   cursor: default;
 }
 
 .tech-marquee__item:hover {
   color: var(--lime);
+  opacity: 1;
 }
 
 @keyframes marquee {
