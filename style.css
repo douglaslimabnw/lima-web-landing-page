@@ -1013,6 +1013,153 @@ img {
 }
 
 /* ═══════════════════════════════════════════════
+   TECH STACK MARQUEE
+   ═══════════════════════════════════════════════ */
+.tech-marquee {
+  width: 100%;
+  overflow: hidden;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  display: flex;
+  white-space: nowrap;
+  position: relative;
+}
+
+.tech-marquee::before,
+.tech-marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.tech-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--surface), transparent);
+}
+
+.tech-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--surface), transparent);
+}
+
+.tech-marquee__track {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+}
+
+.tech-marquee__track:hover {
+  animation-play-state: paused;
+}
+
+.tech-marquee__item {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0 40px;
+  display: inline-flex;
+  align-items: center;
+  transition: color var(--transition);
+  cursor: default;
+}
+
+.tech-marquee__item:hover {
+  color: var(--lime);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ═══════════════════════════════════════════════
+   TESTIMONIALS
+   ═══════════════════════════════════════════════ */
+.testimonials {
+  padding: 100px 0;
+  background: var(--surface);
+  position: relative;
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition);
+}
+
+.testimonial-card:hover {
+  border-color: rgba(181, 255, 43, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card__stars {
+  color: var(--lime);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.testimonial-card__text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-dim);
+  font-style: italic;
+  margin-bottom: 32px;
+  flex: 1;
+}
+
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}
+
+.testimonial-card__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(181, 255, 43, 0.1);
+  color: var(--lime);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.testimonial-card__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.testimonial-card__role {
+  font-size: 0.85rem;
+  color: var(--lime);
+}
+
+/* ═══════════════════════════════════════════════
    CTA SECTION
    ═══════════════════════════════════════════════ */
 .cta-section {
@@ -1309,14 +1456,16 @@ button.service-card__link {
 
   .features__grid,
   .services__grid,
-  .process__grid {
+  .process__grid,
+  .testimonials__grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
   .feature-card,
   .service-card,
-  .process-step {
+  .process-step,
+  .testimonial-card {
     padding: 32px 24px;
   }
 
@@ -1325,7 +1474,8 @@ button.service-card__link {
   .portfolio,
   .plans,
   .process,
-  .faq {
+  .faq,
+  .testimonials {
     padding: 64px 0;
   }
 

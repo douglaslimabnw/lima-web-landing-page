@@ -46,6 +46,7 @@ const revealElements = () => {
     ...document.querySelectorAll('.service-card'),
     ...document.querySelectorAll('.plan-card'),
     ...document.querySelectorAll('.process-step'),
+    ...document.querySelectorAll('.testimonial-card'),
     ...document.querySelectorAll('.faq-item'),
     ...document.querySelectorAll('.section-tag'),
     ...document.querySelectorAll('.section-title'),
@@ -56,7 +57,7 @@ const revealElements = () => {
   targets.forEach(el => el.classList.add('reveal'));
 
   // Add stagger class to grids
-  document.querySelectorAll('.features__grid, .portfolio__grid, .services__grid, .plans__grid, .process__grid, .faq__list').forEach(grid => {
+  document.querySelectorAll('.features__grid, .portfolio__grid, .services__grid, .plans__grid, .process__grid, .faq__list, .testimonials__grid').forEach(grid => {
     grid.classList.add('reveal-stagger');
   });
 
@@ -156,3 +157,26 @@ faqButtons.forEach(btn => {
     if (!isActive) item.classList.add('active');
   });
 });
+
+// ─── 3D Tilt Effect on Plan Cards ───
+if (window.matchMedia("(pointer: fine)").matches) {
+  document.querySelectorAll('.plan-card, .service-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = ((y - centerY) / centerY) * -5;
+      const rotateY = ((x - centerX) / centerX) * 5;
+      
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+    });
+  });
+}
