@@ -642,10 +642,8 @@ img {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 24px 32px;
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
   transition: all var(--transition);
   position: relative;
   overflow: hidden;
@@ -661,6 +659,7 @@ img {
   background: linear-gradient(90deg, transparent, var(--lime), transparent);
   opacity: 0;
   transition: opacity var(--transition);
+  z-index: 2;
 }
 
 .portfolio-card:hover {
@@ -674,42 +673,49 @@ img {
   opacity: 1;
 }
 
-.portfolio-card__visual {
-  width: 56px;
-  height: 56px;
-  background: rgba(181, 255, 43, 0.06);
-  border: 1px solid rgba(181, 255, 43, 0.12);
-  border-radius: var(--radius);
+.portfolio-card__image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  transition: all var(--transition);
 }
 
-.portfolio-card:hover .portfolio-card__visual {
-  background: rgba(181, 255, 43, 0.1);
-  border-color: rgba(181, 255, 43, 0.25);
-  box-shadow: 0 0 24px rgba(181, 255, 43, 0.1);
+.portfolio-card__placeholder {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--border-hover);
+  letter-spacing: 0.05em;
+  opacity: 0.6;
 }
 
-.portfolio-card__initial {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--lime);
-  letter-spacing: -0.02em;
+.portfolio-card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card:hover .portfolio-card__image {
+  transform: scale(1.05);
 }
 
 .portfolio-card__content {
+  padding: 24px 32px;
   flex: 1;
-  min-width: 0;
 }
 
 .portfolio-card__title {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -737,6 +743,142 @@ img {
 
 .portfolio-card:hover .portfolio-card__link svg {
   transform: translate(2px, -2px);
+}
+
+/* ═══════════════════════════════════════════════
+   PLANS
+   ═══════════════════════════════════════════════ */
+.plans {
+  padding: 100px 0;
+  background: var(--surface);
+  position: relative;
+}
+
+.plans__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.plan-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 48px 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition);
+}
+
+.plan-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+.plan-card--featured {
+  border-color: var(--lime);
+  background: linear-gradient(180deg, rgba(181, 255, 43, 0.05) 0%, var(--bg-card) 100%);
+  padding: 56px 32px;
+  z-index: 10;
+  box-shadow: 0 0 40px rgba(181, 255, 43, 0.08);
+}
+
+.plan-card--featured:hover {
+  border-color: rgba(181, 255, 43, 0.6);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 60px rgba(181, 255, 43, 0.15);
+}
+
+.plan-card__badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--lime);
+  color: var(--bg);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 6px 16px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.plan-card__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.plan-card__price {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--lime);
+  margin-bottom: 12px;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.plan-card__price span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.plan-card__desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.plan-card__features {
+  list-style: none;
+  margin-bottom: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.plan-card__features li {
+  font-size: 0.95rem;
+  padding-left: 28px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.plan-card__features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  background: rgba(181, 255, 43, 0.12);
+  border: 1.5px solid var(--lime);
+  border-radius: 4px;
+}
+
+.plan-card__features li::after {
+  content: '✓';
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  font-size: 0.75rem;
+  color: var(--lime);
+  font-weight: 700;
+}
+
+.plan-card__btn {
+  width: 100%;
+  justify-content: center;
 }
 
 /* ═══════════════════════════════════════════════
@@ -1047,7 +1189,8 @@ button.service-card__link {
 
   .features,
   .services,
-  .portfolio {
+  .portfolio,
+  .plans {
     padding: 64px 0;
   }
 

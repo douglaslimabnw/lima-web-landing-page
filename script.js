@@ -44,6 +44,7 @@ const revealElements = () => {
     ...document.querySelectorAll('.feature-card'),
     ...document.querySelectorAll('.portfolio-card'),
     ...document.querySelectorAll('.service-card'),
+    ...document.querySelectorAll('.plan-card'),
     ...document.querySelectorAll('.section-tag'),
     ...document.querySelectorAll('.section-title'),
     ...document.querySelectorAll('.cta-section__inner'),
@@ -53,7 +54,7 @@ const revealElements = () => {
   targets.forEach(el => el.classList.add('reveal'));
 
   // Add stagger class to grids
-  document.querySelectorAll('.features__grid, .portfolio__grid, .services__grid').forEach(grid => {
+  document.querySelectorAll('.features__grid, .portfolio__grid, .services__grid, .plans__grid').forEach(grid => {
     grid.classList.add('reveal-stagger');
   });
 
