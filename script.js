@@ -45,6 +45,8 @@ const revealElements = () => {
     ...document.querySelectorAll('.portfolio-card'),
     ...document.querySelectorAll('.service-card'),
     ...document.querySelectorAll('.plan-card'),
+    ...document.querySelectorAll('.process-step'),
+    ...document.querySelectorAll('.faq-item'),
     ...document.querySelectorAll('.section-tag'),
     ...document.querySelectorAll('.section-title'),
     ...document.querySelectorAll('.cta-section__inner'),
@@ -54,7 +56,7 @@ const revealElements = () => {
   targets.forEach(el => el.classList.add('reveal'));
 
   // Add stagger class to grids
-  document.querySelectorAll('.features__grid, .portfolio__grid, .services__grid, .plans__grid').forEach(grid => {
+  document.querySelectorAll('.features__grid, .portfolio__grid, .services__grid, .plans__grid, .process__grid, .faq__list').forEach(grid => {
     grid.classList.add('reveal-stagger');
   });
 
@@ -136,4 +138,21 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     document.querySelectorAll('.modal-overlay.active').forEach(closeModal);
   }
+});
+
+// ─── FAQ Accordion ───
+const faqButtons = document.querySelectorAll('.faq-item__question');
+faqButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isActive = item.classList.contains('active');
+
+    // Close all FAQs securely
+    document.querySelectorAll('.faq-item').forEach(faq => {
+      faq.classList.remove('active');
+    });
+
+    // Toggle if it wasn't already active
+    if (!isActive) item.classList.add('active');
+  });
 });
