@@ -33,6 +33,14 @@
 
 <body>
 
+    <!-- ═══════════════ PROMO TOP BAR ═══════════════ -->
+    <div class="top-bar">
+        <div class="container top-bar__inner">
+            <span class="top-bar__text">🔥 <strong>PROMOÇÃO DE LANÇAMENTO:</strong> 50% de DESCONTO para os primeiros 50 clientes! <span class="top-bar__hide-mobile">Aproveite agora.</span></span>
+            <a href="https://wa.me/5543996028877?text=Olá!%20Quero%20aproveitar%20o%20desconto%20de%2050%25." target="_blank" rel="noopener" class="top-bar__link">Garantir Desconto →</a>
+        </div>
+    </div>
+
     <!-- ═══════════════ HEADER ═══════════════ -->
     <header class="header" id="header">
         <div class="container header__inner">
@@ -331,6 +339,17 @@
                     </button>
                 </div>
 
+                <div class="service-card" data-modal="modal-social">
+                    <div class="service-card__number">04</div>
+                    <h3 class="service-card__title">Gestão de Posts</h3>
+                    <p class="service-card__desc">
+                        Artes profissionais para seu Instagram. Criamos posts que conectam e vendem para o seu negócio.
+                    </p>
+                    <button class="service-card__link" data-modal="modal-social">
+                        Saiba mais →
+                    </button>
+                </div>
+
             </div>
         </div>
     </section>
@@ -375,50 +394,123 @@
         <div class="container">
             <p class="section-tag">Investimento</p>
             <h2 class="section-title">Nossos <span class="text-lime">Planos</span></h2>
-            <div class="plans__grid">
-                
-                <div class="plan-card">
-                    <h3 class="plan-card__title">Link in Bio</h3>
-                    <div class="plan-card__price">R$ 497<span>/único</span></div>
-                    <p class="plan-card__desc">Ideal para centralizar seus links no Instagram e TikTok.</p>
-                    <ul class="plan-card__features">
-                        <li>Design 100% personalizado</li>
-                        <li>Links ilimitados</li>
-                        <li>Botão WhatsApp animado</li>
-                        <li>Hospedagem inclusa (1 ano)</li>
-                    </ul>
-                    <a href="https://wa.me/5543996028877?text=Olá!%20Quero%20o%20plano%20Link%20in%20Bio." target="_blank" rel="noopener" class="btn btn--outline plan-card__btn">Quero este plano</a>
-                </div>
+            <div class="plans__tabs">
+                <button class="plans__tab active" data-tab="sites">Criação de Sites</button>
+                <button class="plans__tab" data-tab="social">Social Media</button>
+            </div>
 
-                <div class="plan-card plan-card--featured">
-                    <div class="plan-card__badge">Mais Popular</div>
-                    <h3 class="plan-card__title">Landing Page</h3>
-                    <div class="plan-card__price">R$ 1.197<span>/único</span></div>
-                    <p class="plan-card__desc">Página de alta conversão para vender serviços ou produtos.</p>
-                    <ul class="plan-card__features">
-                        <li>Design UI/UX Premium</li>
-                        <li>Copywriting Estratégico</li>
-                        <li>Otimização SEO e Velocidade</li>
-                        <li>Integração Pixel/Analytics</li>
-                        <li>Até 6 seções completas</li>
-                    </ul>
-                    <a href="https://wa.me/5543996028877?text=Olá!%20Quero%20o%20plano%20Landing%20Page." target="_blank" rel="noopener" class="btn btn--glow plan-card__btn">Quero este plano</a>
-                </div>
+            <div class="plans__container active" id="plans-sites">
+                <div class="plans__grid">
+                    
+                    <div class="plan-card">
+                        <h3 class="plan-card__title">Link in Bio</h3>
+                        <div class="plan-card__price">
+                            <span class="plan-card__old-price">R$ 397</span>
+                            R$ 198,50<span>/único</span>
+                        </div>
+                        <p class="plan-card__desc">Ideal para centralizar seus links no Instagram e TikTok.</p>
+                        <ul class="plan-card__features">
+                            <li>Design 100% personalizado</li>
+                            <li>Links ilimitados</li>
+                            <li>Botão WhatsApp animado</li>
+                            <li>Hospedagem inclusa (1 ano)</li>
+                        </ul>
+                        <a href="https://wa.me/5543996028877?text=Olá!%20Quero%20o%20plano%20Link%20in%20Bio%20com%2050%25%20de%20desconto." target="_blank" rel="noopener" class="btn btn--outline plan-card__btn">Quero este plano</a>
+                    </div>
 
-                <div class="plan-card">
-                    <h3 class="plan-card__title">Institucional</h3>
-                    <div class="plan-card__price">R$ 1.897<span>/único</span></div>
-                    <p class="plan-card__desc">Site completo com várias páginas para consolidar sua marca.</p>
-                    <ul class="plan-card__features">
-                        <li>Até 5 páginas (Home, Sobre, etc)</li>
-                        <li>Área de Portfólio/Blog</li>
-                        <li>Formulários Avançados</li>
-                        <li>Otimização SEO Completa</li>
-                        <li>Painel Administrativo</li>
-                    </ul>
-                    <a href="https://wa.me/5543996028877?text=Olá!%20Quero%20o%20plano%20Institucional." target="_blank" rel="noopener" class="btn btn--outline plan-card__btn">Quero este plano</a>
-                </div>
+                    <div class="plan-card plan-card--featured">
+                        <div class="plan-card__badge">Mais Popular</div>
+                        <h3 class="plan-card__title">Landing Page</h3>
+                        <div class="plan-card__price">
+                            <span class="plan-card__old-price">R$ 947</span>
+                            R$ 473,50<span>/único</span>
+                        </div>
+                        <p class="plan-card__desc">Página de alta conversão para vender serviços ou produtos.</p>
+                        <ul class="plan-card__features">
+                            <li>Design UI/UX Premium</li>
+                            <li>Copywriting Estratégico</li>
+                            <li>Otimização SEO e Velocidade</li>
+                            <li>Integração Pixel/Analytics</li>
+                            <li>Até 6 seções completas</li>
+                        </ul>
+                        <a href="https://wa.me/5543996028877?text=Olá!%20Quero%20o%20plano%20Landing%20Page%20com%2050%25%20de%20desconto." target="_blank" rel="noopener" class="btn btn--glow plan-card__btn">Quero este plano</a>
+                    </div>
 
+                    <div class="plan-card">
+                        <h3 class="plan-card__title">Institucional</h3>
+                        <div class="plan-card__price">
+                            <span class="plan-card__old-price">R$ 1.497</span>
+                            R$ 748,50<span>/único</span>
+                        </div>
+                        <p class="plan-card__desc">Site completo com várias páginas para consolidar sua marca.</p>
+                        <ul class="plan-card__features">
+                            <li>Até 5 páginas (Home, Sobre, etc)</li>
+                            <li>Área de Portfólio/Blog</li>
+                            <li>Formulários Avançados</li>
+                            <li>Otimização SEO Completa</li>
+                            <li>Painel Administrativo</li>
+                        </ul>
+                        <a href="https://wa.me/5543996028877?text=Olá!%20Quero%20o%20plano%20Institucional%20com%2050%25%20de%20desconto." target="_blank" rel="noopener" class="btn btn--outline plan-card__btn">Quero este plano</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="plans__container" id="plans-social">
+                <div class="plans__grid">
+                    
+                    <div class="plan-card">
+                        <h3 class="plan-card__title">Social Start</h3>
+                        <div class="plan-card__price">
+                            <span class="plan-card__old-price">R$ 397</span>
+                            R$ 198,50<span>/mês</span>
+                        </div>
+                        <p class="plan-card__desc">Presença básica e profissional para seu negócio.</p>
+                        <ul class="plan-card__features">
+                            <li>12 Posts Profissionais</li>
+                            <li>Legendas Estratégicas</li>
+                            <li>Design Personalizado</li>
+                            <li>Suporte via WhatsApp</li>
+                        </ul>
+                        <a href="https://wa.me/5543996028877?text=Olá!%20Quero%20o%20plano%20Social%20Start%20com%2050%25%20de%20desconto%20no%20primeiro%20mês." target="_blank" rel="noopener" class="btn btn--outline plan-card__btn">Quero este plano</a>
+                    </div>
+
+                    <div class="plan-card plan-card--featured">
+                        <div class="plan-card__badge">Recomendado</div>
+                        <h3 class="plan-card__title">Social Pro</h3>
+                        <div class="plan-card__price">
+                            <span class="plan-card__old-price">R$ 697</span>
+                            R$ 348,50<span>/mês</span>
+                        </div>
+                        <p class="plan-card__desc">Para quem busca crescimento e engajamento real.</p>
+                        <ul class="plan-card__features">
+                            <li>24 Posts Profissionais</li>
+                            <li>Identidade Visual para Redes</li>
+                            <li>Pesquisa de Hashtags</li>
+                            <li>Estratégia de Conteúdo</li>
+                            <li>Suporte Prioritário</li>
+                        </ul>
+                        <a href="https://wa.me/5543996028877?text=Olá!%20Quero%20o%20plano%20Social%20Pro%20com%2050%25%20de%20desconto%20no%20primeiro%20mês." target="_blank" rel="noopener" class="btn btn--glow plan-card__btn">Quero este plano</a>
+                    </div>
+
+                    <div class="plan-card">
+                        <h3 class="plan-card__title">Social Premium</h3>
+                        <div class="plan-card__price">
+                            <span class="plan-card__old-price">R$ 997</span>
+                            R$ 498,50<span>/mês</span>
+                        </div>
+                        <p class="plan-card__desc">Domine seu nicho com autoridade e volume.</p>
+                        <ul class="plan-card__features">
+                            <li>30 Posts + 4 Reels</li>
+                            <li>Stories Estratégicos</li>
+                            <li>Gestão de Destaques</li>
+                            <li>Análise Mensal de Métricas</li>
+                            <li>Consultoria de Perfil</li>
+                        </ul>
+                        <a href="https://wa.me/5543996028877?text=Olá!%20Quero%20o%20plano%20Social%20Premium%20com%2050%25%20de%20desconto%20no%20primeiro%20mês." target="_blank" rel="noopener" class="btn btn--outline plan-card__btn">Quero este plano</a>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
@@ -639,6 +731,29 @@
             <a href="https://wa.me/5543996028877?text=Olá!%20Tenho%20interesse%20em%20uma%20página%20Link%20in%20Bio."
                 target="_blank" rel="noopener" class="btn btn--glow modal__cta">
                 Quero meu link in bio
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal: Gestão de Posts (Social Media) -->
+    <div class="modal-overlay" id="modal-social">
+        <div class="modal">
+            <button class="modal__close" aria-label="Fechar">&times;</button>
+            <div class="modal__number">04</div>
+            <h3 class="modal__title">Gestão de Posts</h3>
+            <p class="modal__desc">
+                Ter um feed profissional é essencial para transmitir confiança. Criamos artes exclusivas que respeitam a identidade da sua marca e atraem a atenção do seu cliente ideal.
+            </p>
+            <ul class="modal__features">
+                <li>Artes exclusivas e profissionais</li>
+                <li>Legendas persuasivas (Copywriting)</li>
+                <li>Identidade visual padronizada</li>
+                <li>Foco em engajamento e conversão</li>
+                <li>Formatos para Feed, Stories e Reels</li>
+            </ul>
+            <a href="https://wa.me/5543996028877?text=Olá!%20Tenho%20interesse%20nos%20pacotes%20de%20Social%20Media."
+                target="_blank" rel="noopener" class="btn btn--glow modal__cta">
+                Quero posts profissionais
             </a>
         </div>
     </div>

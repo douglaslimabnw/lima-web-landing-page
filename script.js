@@ -92,7 +92,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const targetEl = document.querySelector(targetId);
     if (targetEl) {
       e.preventDefault();
-      const offset = 80;
+      const offset = 120;
       const top = targetEl.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
@@ -157,5 +157,29 @@ faqButtons.forEach(btn => {
     if (!isActive) item.classList.add('active');
   });
 });
+
+// ─── Plans Tabs ───
+const planTabs = document.querySelectorAll('.plans__tab');
+const planContainers = document.querySelectorAll('.plans__container');
+
+if (planTabs.length > 0) {
+  planTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      
+      // Toggle active tab
+      planTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      
+      // Toggle active container
+      planContainers.forEach(container => {
+        container.classList.remove('active');
+        if (container.id === `plans-${target}`) {
+          container.classList.add('active');
+        }
+      });
+    });
+  });
+}
 
 
